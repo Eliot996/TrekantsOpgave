@@ -2,6 +2,10 @@ public class Triangle {
     private int a, b, c;
 
     public Triangle(int a, int b, int c){
+        // check for illegal inputs
+        if (a <= 0 || b <= 0 || c <= 0)
+            throw new IllegalArgumentException("a, b and c cannot be less than or equal to 0");
+
         this.a = a;
         this.b = b;
         this.c = c;
@@ -11,9 +15,7 @@ public class Triangle {
 
         // checks if the trianlge is valid,
         // by checking that the to shorter sides are not shorter than or equal to the longest side
-        if (a < c && b < c && c >= a+b) return "Invalid";
-        if (b < a && c < a && a >= c+b) return "Invalid";
-        if (a < b && c < b && b >= a+c) return "Invalid";
+        if ( a >= c+b || b >= a+c ||  c >= a+b) return "Invalid";
 
         if(a == b && b == c){
             return "equilateral";

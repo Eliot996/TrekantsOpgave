@@ -18,25 +18,36 @@ class TriangleTest {
         assertTrue(checkA && checkB && checkC);
     }
 
+    // Triple a's
     @Test
     void testEquilateralOfGetType() {
+        // Arrange
         Triangle triangle = new Triangle(1, 1, 1);
-
-        assertEquals("equilateral", triangle.getType());
+        String expected = "equilateral";
+        // Act
+        String actual = triangle.getType();
+        // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     void testIsoscelesOfGetType() {
         Triangle triangle = new Triangle(2, 2, 3);
-
-        assertEquals("isosceles", triangle.getType());
+        String expected = "isosceles";
+        // Act
+        String actual = triangle.getType();
+        // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
     void testScaleneOfGetType() {
         Triangle triangle = new Triangle(2, 3, 4);
-
-        assertEquals("scalene", triangle.getType());
+        String expected = "scalene";
+        // Act
+        String actual = triangle.getType();
+        // Assert
+        assertEquals(expected, actual);
     }
 
 
